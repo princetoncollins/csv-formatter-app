@@ -87,6 +87,9 @@ footer {
     font-family:'Arial', Tahoma, Geneva, Verdana, sans-serif;
     color: #df6f6f;
     white-space: pre-line;
+    background: #222;
+    padding: 16px;
+    border-radius: 5px;
     transition: ease-in-out 0.2s all; 
 }
 

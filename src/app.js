@@ -27,12 +27,13 @@ app.get('/api/format', (req, res) => {
         });
     }
     formatStringToCsv(req.query.string)
-    .then(function(response) {
+    .then((response) => {
+        // Logging error responses to the terminal. Might be helpful.
         if (response.error) {
-            // Logging the error response to the terminal. Might be helpful.
             console.log(chalk.red(response.error));
             return res.send({ data: response });
         }
+
         // Logging the response to the terminal. Might be helpful. It's pretty too. :)
         console.log(chalk.yellow('Formatted CSV string output:'));
         console.log(chalk.cyan(response));
