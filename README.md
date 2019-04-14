@@ -8,7 +8,7 @@ rather than double quotes, like so:
 
 <b>"Header1"</b> or <b>"DataField1"</b>
 
-The string is then rendered to the Vue.js front end in a CSV-like format.
+The string is then rendered in CSV-like format to the Vue.js front end.
 
 <b>To use:</b><br>
 - <code><b>git clone</b></code> into desired folder location.
