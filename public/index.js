@@ -5,10 +5,10 @@ var stringInput = Vue.component('string-input', {
             formattedString: ''
         }
     },
-    template: `<div style="display: flex; flex-direction: column; margin-top: 8px">
-                  <textarea v-bind:value="value" v-on:input="$emit('input', $event.target.value)" rows="10"></textarea>
-                  <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
-                    <button v-on:click="formatCsvInput">Format CSV String</button>
+    template: `<div class="string-input-container">
+                  <textarea class="textarea" v-bind:value="value" v-on:input="$emit('input', $event.target.value)" rows="10"></textarea>
+                  <div class="actions">
+                    <button class="button" v-on:click="formatCsvInput">Format CSV String</button>
                   </div>
                </div>`,
     methods: {

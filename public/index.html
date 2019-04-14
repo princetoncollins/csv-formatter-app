@@ -14,14 +14,14 @@
         <div id="app" class="container">
             <h1 class="app-title">CSV String Formatter</h1>
             <div>
-                <h3 class="subtitle">Enter a CSV string:</h3>
+                <p class="subtitle">Enter a CSV string:</p>
                 <div class="input-container">
                     <string-input v-model="string"></string-input>
                 </div>
             </div>
             <hr>
             <div class="output-container">
-                <h3 class="subtitle">Formatted output:</h3>
+                <p class="subtitle">Formatted output:</p>
                 <p class="output" v-bind:class="{ 'yellow': formattedString === 'Snap!', 'orange': formattedString === 'Crackle!', 'red': formattedString === 'POP!' }" v-if="formattedString">{{ formattedString }}</p>
                 <p class="error" v-if="error">{{ error }}</p>
             </div>
@@ -29,7 +29,7 @@
 
         <footer>
             <div class="footer-content">
-                Created by Princeton Collins
+                Created by Princeton Collins.
             </div>
         </footer>
 

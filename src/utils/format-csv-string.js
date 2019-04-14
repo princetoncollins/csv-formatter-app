@@ -22,7 +22,8 @@ const formatStringToCsv = (stringArg) => {
             return reject({ error: 'Invalid input.\r\n\r\n Please provide a CSV string delimited by carriage returns.\r\n(e.g. "Header One","HeaderTwo"\\r\\n"Value One","Value Two")' });
         } else {
             // Split the string input on carriage returns to identify and return rows.
-            dataRows.push(stringArg.split('\\r\\n').map((row) => {
+            let filteredRows = stringArg.replace(/\\r\\n/g, "\\n").split('\\n');
+            dataRows.push(filteredRows.map((row) => {
                 row = row.replace('\n', '').trim().replace("'", '').split();
                 return row = eval('[' + row[0] + ']');
             }));
