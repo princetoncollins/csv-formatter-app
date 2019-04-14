@@ -1,5 +1,8 @@
 <h1>CSV String Formatter App</h1>
 
-This is a <b>Node.js</b> application that allows the end user to enter into a text-area input a CSV string delimited by 
-carriage returns(e.g. <b>\r\n</b> or <b>\n</b>), and returns a formatted CSV string where each header in the header row and 
-each corresponding data field in each data field row is wrapped in square brackets(e.g. <b>[]</b>) rather than double quotes, which is then rendered to a Vue.js front end.
+This is a <b>Node.js</b> application with a <b>Vue.js</b> front end interface that allows the end user to enter into a text-area input a CSV string delimited by carriage returns(e.g. <b>\r\n</b> or <b>\n</b>), and returns a formatted CSV string where each header in the header row and each corresponding data field in each data field row is wrapped in square brackets(e.g. <b>[]</b>) rather than double quotes, which is then rendered to the front end.
+
+<b>To use:</b><br>
+- <code><b>git clone</b></code> into desired folder location.
+- Get and install required npm module dependencies with <code><b>npm install</b></code><br>
+- Run with <code><b>node src/app.js</b></code>
