@@ -31,7 +31,7 @@ const formatStringToCsv = (stringArg) => {
             for (let i = 1; i < dataRows[0].length; i++) {
                 const headerRow = dataRows[0][0];
                 if (dataRows[0][i].length !== headerRow.length) {
-                    return reject({ error: 'Delimited rows must all have the same number of fields.' });
+                    return reject({ error: 'Delimited rows must all have the same number of fields.\r\n\r\nPlease provide a header row and at least one data row.' });
                 }
             }
             return resolve(dataRows[0]);
