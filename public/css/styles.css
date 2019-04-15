@@ -163,6 +163,7 @@ footer {
 }
 
 .button:hover {
+    border: 1px solid #42b883;
     background:#42b883;
     color: #35495e;
 }
