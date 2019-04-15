@@ -4,7 +4,7 @@ This is a <b>Node.js</b> application with a <b>Vue.js</b> front end interface th
 
 Example CSV string input:
 
-<b>"Avengers","X-Men","Justice League"<br>"Captain America","Cyclops","Superman"<br>"Iron Man","Wolverine","Batman"<br>"Spider Man","Rogue","Wonder Woman"</b>
+<b>"Avengers","X-Men","Justice League"\r\n<br>"Captain America","Cyclops","Superman"\r\n<br>"Iron Man","Wolverine","Batman"\r\n<br>"Spider Man","Rogue","Wonder Woman"</b>
 
 is formatted to:
 
