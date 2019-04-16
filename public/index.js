@@ -1,4 +1,4 @@
-var stringInput = Vue.component('string-input', {
+const stringInput = Vue.component('string-input', {
     data: () => {
         return {
             value: this.value,
@@ -46,14 +46,11 @@ var stringInput = Vue.component('string-input', {
                     // Why not? :)
                 });
             });
-
-
-            
         }
     }
 });
 
-var vm = new Vue({
+const vm = new Vue({
     el: '#app',
     data: {
         string: '',
@@ -62,5 +59,21 @@ var vm = new Vue({
     },
     components: {
         stringInput: stringInput
+    },
+    methods: {
+        copyToClipboard: () => {
+            const range = document.createRange();
+            range.selectNode(document.getElementById("example-text"));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+            vm.popToast();
+        },
+        popToast: () => {
+            var toastElement = document.getElementById("toast");
+            toastElement.className = "show";
+            setTimeout(() => { toastElement.className = toastElement.className.replace("show", ""); }, 5000);
+        }
     }
 });

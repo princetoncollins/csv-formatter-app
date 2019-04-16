@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Open+Sans');
 
 html {
     min-height: 100%;
@@ -54,7 +54,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto Slab', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     color: #ffffff;
 }
@@ -151,7 +151,7 @@ footer {
 }
 
 .button {
-    font-family: 'Roboto Slab', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     padding: 8px;
     background: #35495e;
@@ -165,7 +165,7 @@ footer {
 .button:hover {
     border: 1px solid #42b883;
     background:#42b883;
-    color: #35495e;
+    color: #ffffff;
 }
 
 .button:focus {
@@ -178,9 +178,100 @@ footer {
     padding: 8px;
 }
 
+.example {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    white-space: pre-line;
+    background: #333;
+    padding: 16px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+.example p {
+    margin: 0 0 0 16px;
+}
+
+.example i {
+    position: absolute;
+    right: 0;
+    font-size: 1.3em;
+    margin-right: 16px;
+    padding: 12px;
+    border-radius: 50px;
+    color: #42b883;
+    background: #35495e;
+}
+
+.example i:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background: #42b883;
+    border-radius: 30px;
+    padding: 12px;
+    transition: ease-in-out 0.1s all;
+}
+
 .vue {
     background: #35495e;
     color: #42b883;
     padding-right: 4px;
     padding-left: 4px;
+}
+
+/* Toast Magic */
+
+#toast {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+    padding: 16px;
+    background-color: #42b883;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, stay 2s 1s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, stay 2s 1s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes stay {
+    from {min-width: max-content} 
+    to {min-width: max-content}
+}
+
+@keyframes stay {
+    from {min-width: max-content}
+    to {min-width: max-content}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
 }
