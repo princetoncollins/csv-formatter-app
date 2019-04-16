@@ -15,7 +15,6 @@
         <div id="app" class="container">
             <h1 class="app-title">CSV String Formatter</h1>
             <div>
-                <p class="subtitle">Enter a CSV string:</p>
                 <div class="example">
                     <b>Example CSV string:</b>
                     <p id="example-text">"Patient Name","SSN","Age","Phone Number","Status"\r\n
@@ -25,6 +24,7 @@
                     </p>
                     <i class="fas fa-clipboard" v-on:click="copyToClipboard" title="Copy to clipboard."></i>
                 </div>
+                <p class="subtitle">Enter a CSV string:</p>
                 <div class="input-container">
                     <string-input v-model="string"></string-input>
                 </div>
