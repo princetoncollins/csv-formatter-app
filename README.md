@@ -1,14 +1,16 @@
 <h1>CSV String Formatter App</h1>
 
-This is a <b>Node.js</b> application with a <b>Vue.js</b> front end interface that allows the end user to enter into a text-area input a CSV string delimited by carriage returns(e.g. <b>\r\n</b> or <b>\n</b>), and returns a formatted CSV string where each header in the header row and each corresponding data field in each data field row is wrapped in square brackets, like so:
+This is a <b>Node.js</b> application with a <b>Vue.js</b> front end interface that allows the end user to enter a CSV string delimited by carriage returns(e.g. <b>\r\n</b> or <b>\n</b>), and returns a formatted CSV string where each header in the header row and each corresponding data field in each data field row is wrapped in square brackets.
 
-<b>['Header1']</b> or <b>['DataField1']</b>
+Example CSV string input:
 
-rather than double quotes, like so:
+<b>"Avengers","X-Men","Justice League"\r\n<br>"Captain America","Cyclops","Superman"\r\n<br>"Iron Man","Wolverine","Batman"\r\n<br>"Spider Man","Rogue","Wonder Woman"</b>
 
-<b>"Header1"</b> or <b>"DataField1"</b>
+is formatted to:
 
-The string is then rendered in CSV-like format to the Vue.js front end.
+<b>[Avengers] [X-Men] [Justice League]</br>[Captain America] [Cyclops] [Superman]</br>[Iron Man] [Wolverine] [Batman]</br>[Spider Man] [Rogue] [Wonder Woman]</b>
+
+The formatted CSV string is then rendered to the Vue.js front end.
 
 <b>To use:</b><br>
 - <code><b>git clone</b></code> into desired folder location.
