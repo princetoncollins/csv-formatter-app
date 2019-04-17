@@ -1,0 +1,27 @@
+{
+  "name": "csv-formatter-app",
+  "version": "1.0.0",
+  "description": "Formats a CSV string into a CSV string outfitted with square brackets.",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princetoncollins/csv-formatter-app.git"
+  },
+  "author": "Princeton Collins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/princetoncollins/csv-formatter-app/issues"
+  },
+  "homepage": "https://github.com/princetoncollins/csv-formatter-app#readme"
+}
