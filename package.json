@@ -2,7 +2,7 @@
   "name": "csv-formatter-app",
   "version": "1.0.0",
   "description": "Formats a CSV string into a CSV string outfitted with square brackets.",
-  "main": "index.js",
+  "main": "src/app.js",
   "dependencies": {
     "chalk": "^2.4.2",
     "express": "^4.16.4",
